@@ -34,7 +34,7 @@ public class ReviewServiceImpl implements ReviewService {
 		
 		if(company !=null) {
 			review.setCompany(company);
-			System.out.println("comoany not null, company is : "+company);
+			System.out.println("company not null, company is : "+company);
 			repository.save(review);
 			return true;
 		}

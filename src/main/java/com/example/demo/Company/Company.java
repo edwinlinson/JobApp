@@ -13,6 +13,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 @Data
 @Entity
@@ -30,6 +31,7 @@ public class Company {
 	private List<Job> jobs;
 	
 	@JsonIgnore
+	@ToString.Exclude
 	@OneToMany(mappedBy = "company")
 	private List<Review> reviews;
 }
